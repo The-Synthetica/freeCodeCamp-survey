@@ -1,0 +1,196 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  } 
+  
+.content{
+    overflow: auto;
+    position: relative;
+}
+
+.content::before{
+    content: "";
+    position: fixed;
+    left: -5%;
+    top: -5%;
+    right: -5%;
+    z-index: -1;
+
+    display: block;
+
+    background-color: rgb(71,37,164);
+    background: linear-gradient(90deg, rgba(71,37,164,1) 25%, rgba(137,51,250,1) 50%, rgba(12,53,181,1) 75%);
+    background-size: cover;
+
+    width: 110%;
+    height: 110%;
+
+    filter: blur(1px);
+} 
+
+main{
+    background-color: rgba(255, 255, 255, 0.501);
+    color: rgb(26, 26, 26);
+    font-family: 'Vollkorn', sans-serif;
+    padding: 5vw;
+    text-align: left;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+#title{
+    font-family:  'Abril Fatface', monospace;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+#description{
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0 2vw;
+}
+
+fieldset{
+    border: 0;
+}
+
+.form-fieldset{
+    display: flex;
+    flex-direction: column;
+    margin: 5vw 0 2vw 2vw;
+}
+
+
+input{
+    font-family: 'Vollkorn', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-radius: 2px;
+}
+
+#name, #email, #number, #dropdown{
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+
+/* Desactivamos los botones de los input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+select{
+    font-family: 'Vollkorn', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+label{
+    margin: 0.25rem 0;
+    padding-top: 0.5rem;
+    font-size: 1.125rem;
+}
+
+legend{
+    margin: 1rem 0 0 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#comment{
+    font-size: 1.25rem;
+}
+
+textarea{
+    height: 10vh;
+    resize: none;
+    font-family: 'Vollkorn', sans-serif;
+    font-size: 1.125rem;
+}
+
+#submit{
+    background-color: rgb(26, 26, 26);
+    color: #ffffff;
+    font-family: 'Vollkorn', sans-serif;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.alert{
+    display: none;
+}
+
+
+
+@media (min-width:700px){
+    main{
+        margin: 0 10% 0 10%;
+    }
+
+    #title{
+        font-size: 3.5rem;
+    }
+
+    #description{
+        font-size: 2rem;
+    }
+
+    .content::before{
+        background: url("background2.png") center center fixed no-repeat, linear-gradient(90deg, rgba(71,37,164,1) 25%, rgba(137,51,250,1) 50%, rgba(12,53,181,1) 75%);
+        background-size: cover;
+    }
+}
+
+@media(max-width:275px){
+    main{
+        display: none;
+    }
+    
+    .alert{
+        display: block;
+        margin: 0 auto;
+
+        width: auto;
+        height: auto;
+    }
+
+    .alert::before{
+        content: "";
+        display: block;
+
+        margin: 0 auto;
+
+        width: 0;
+        height: 0;
+                
+        border-left: 30vw solid transparent;
+        border-right: 30vw solid transparent;
+        border-bottom: 50vw solid rgb(119, 128, 0);
+
+        z-index: -1;
+    }
+
+    .alert::after{
+        content: "⚠";
+        display: block;
+
+        position: absolute;
+
+        top: -10vw;
+        left: 10vw;
+        bottom: 0;
+        right: 10vw;
+
+        text-align: center;
+
+        color: rgb(0, 0, 0);
+
+        font-size: 50vw;
+
+        z-index: 2;
+    }
+}

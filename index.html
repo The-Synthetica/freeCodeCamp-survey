@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+    <div class="content">
+        <div class="alert"></div>
+
+        <main>
+        <header>
+        <h1 id="title">Dreamspace</h1>
+        <p id="description">Sea bienvenida a Sleep Clinic y muchas gracias por formar parte de nuestros estudios del sueño.</p>
+        </header>   
+
+            <form id="survey-form">
+        
+                <fieldset class="form-fieldset">
+                    <legend>Informacion personal:</legend>
+                    
+                    <label id="name-label" for="name-label">Nombre:</label>
+                    <input  id="name" type="text" required placeholder="Inserte su nombre">
+
+                    <label id="email-label" for="email-label">Correo electronico:</label>
+                    <input id="email" type="email" required placeholder="Inserte su correo electronico">
+                    
+                    <label id="number-label" for="number-label">Edad:</label>
+                    <input class="form-block-item" id="number" type="number" min="1" max="99" required placeholder="Inserte su Edad">
+                    
+                    <label for="dropdown">Genero:</label>
+                    <select required name="gender" id="dropdown" form="surver-form">
+                        <option selected disabled value label="Seleccione una opcion."></option>
+                        <option value="Femenino" label="Femenino"></option>
+                        <option value="NoBinario" label="No binario"></option>
+                        <option value="Masculino" label="Masculino"></option>
+                    </select>
+
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend>¿Duerme todos los dias?</legend>
+
+                    <label for="Si">
+                    <input id="Si" value="si" type="radio" name="Duerme-rutinariamente">
+                    Si</label>
+                    
+                    <label for="No">
+                    <input id:"No" value="no" type="radio" name="Duerme-rutinariamente">
+                    No</label>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend>¿Tiene algun trastorno del sueño diagnosticado?</legend>
+                    
+                    <label for="Si">
+                    <input class="form-block-item" id="Si" value="si" type="radio" name="trastorno">
+                    Si</label>
+                    
+                    <label for="No">
+                    <input class="form-block-item" id:"No" value="no" type="radio" name="trastorno">
+                    No</label>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend>¿Cuantas horas duerme en promedio?</legend>
+                    
+                    <label for="-4">
+                    <input class="form-item" id="-4" value="0-4" type="radio" name="Horas-Sueño">
+                    Menos de 4 horas.</label>
+                    
+                    <label for="4-6">
+                    <input class="form-item" id="4-6" value="4-6" type="radio" name="Horas-Sueño">
+                    Entre 4 y 6 horas.</label>
+                    
+                    <label for="6-8">
+                    <input class="form-item" id="6-8" value="6-8" type="radio" name="Horas-Sueño">
+                    Entre 6 y 8 horas.</label>
+                    
+                    <label for="8-10">
+                    <input class="form-item" id="8-10" value="8-10" type="radio" name="Horas-Sueño">
+                    Entre 8 y 10 horas.</label>
+                    
+                    <label for="+10">
+                    <input class="form-item" id="+10" value="+10" type="radio" name="Horas-Sueño">
+                    Mas de 10 horas.</label>
+
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend>Marquee las afirmaciones con las que se considere identificada.</legend>
+                    
+                    <label for="check-1">
+                    <input id="check-1" value="Duerme-Acompañado" type="checkbox">
+                    Suelo dormir acompañado de una mascota o persona.</label>
+                    
+                    <label for="check-2">
+                    <input id="check-2" value="Duerme-Luz" type="checkbox">
+                    Suelo dormir con alguna luz de noche prendida.</label>
+                    
+                    <label for="check-3">
+                    <input id="check-3" value="Consume-Somniferos" type="checkbox">
+                    Consumo medicacion para dormir.</label>
+                    
+                    <label for="check-4">
+                    <input id="check-4" value="Sueño-Alterado-Medicamentos" type="checkbox">
+                    Una medicamento que consumo altera mi sueño.</label>
+                    
+                    <label for="check-5">
+                    <input id="check-5" value="Suele-Soñar" type="checkbox">
+                    Sueño frecuentemente</label>
+                    
+                    <label for="check-6">
+                    <input id="check-6" value="Pesadillas-Frecuentes" type="checkbox">
+                    Tengo pesadillas frecuentemente.</label>
+
+                    <label for="check-7">
+                    <input id="check-7" value="Medita" type="checkbox">
+                    Suelo Meditar</label>
+                    
+                    <label for="check-8">
+                    <input id="check-8" value="Duerme-Disp-Electr" type="checkbox">
+                    Duermo con dispositivos electronicos cerca.</label>
+                    
+                    <label for="check-9">
+                    <input id="check-9" value="Usa-Pantallas-Antes-Dormir" type="checkbox">
+                    Uso mi celular o computadora antes de dormir.</label>
+                    
+                    <label for="check-10">
+                    <input id="check-10" value="Duerme-Siesta" type="checkbox">
+                    Generalmente duermo durante el dia. (siesta)</label>
+                </fieldset>
+
+
+                <fieldset class="form-fieldset">
+                <p id="comment">Si tiene algun comentario o sugerencia puede dejarla aqui:</p>
+                <textarea form="survey-form"></textarea>
+                </fieldset>
+                
+                <fieldset class="form-fieldset">
+                <button id="submit" type="submit">Subir</button>
+                </fieldset>
+
+            </form>
+        
+        <footer>
+
+        </footer>
+
+        </main>
+    </div>
+    </body>
+</html>
